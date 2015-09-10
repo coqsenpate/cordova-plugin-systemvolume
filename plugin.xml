@@ -5,6 +5,7 @@
     <description>systemVolume Plugin for Cordova</description>
     <license>MIT</license>
     <keywords>cordova, change, system, volume</keywords>
+    <repo>https://github.com/coqsenpate/cordova-plugin-systemvolume</repo>
     <js-module src="www/systemVolume.js" name="systemVolume">
         <clobbers target="systemVolume" />
     </js-module>
