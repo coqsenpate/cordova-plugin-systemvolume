@@ -3,7 +3,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <Foundation/Foundation.h>
 
-@implementation systemVolume
+@implementation SystemVolume
 
 - (void)pluginInitialize
 {

@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://github.com/coqsenpate/cordova-plugin-systemvolume"
-        id="com.coqsenpate.cordova.systemvolume" version="0.1.0">
+        id="com.coqsenpate.cordova.systemvolume" version="0.2.0">
     <name>SystemVolume</name>
     <description>systemVolume Plugin for Cordova</description>
     <license>MIT</license>
     <keywords>cordova, change, system, volume</keywords>
     <repo>https://github.com/coqsenpate/cordova-plugin-systemvolume</repo>
-    <js-module src="www/systemVolume.js" name="systemVolume">
-        <clobbers target="systemVolume" />
+    <js-module src="www/SystemVolume.js" name="SystemVolume">
+        <clobbers target="SystemVolume" />
     </js-module>
+    <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="systemVolume">
-                <param name="ios-package" value="systemVolume"/>
+            <feature name="SystemVolume">
+                <param name="ios-package" value="SystemVolume"/>
             </feature>
         </config-file>
-        <header-file src="src/ios/systemVolume.h" />
-        <source-file src="src/ios/systemVolume.m" />
+        <header-file src="src/ios/SystemVolume.h" />
+        <source-file src="src/ios/SystemVolume.m" />
+    </platform>
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SystemVolume">
+                <param name="android-package" value="com.coqsenpate.cordova.SystemVolume"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/SystemVolume.java" target-dir="src/com/coqsenpate/cordova"/>
     </platform>
 </plugin>

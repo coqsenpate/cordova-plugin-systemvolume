@@ -1,6 +1,6 @@
 #import <Cordova/CDV.h>
 
-@interface systemVolume : CDVPlugin
+@interface SystemVolume : CDVPlugin
 {
   UISlider* volumeViewSlider;
 }

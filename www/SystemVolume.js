@@ -1,14 +1,9 @@
 module.exports = {
   set: function(volumeValue){
     //correct the volume value if it's out of the bounds (0;100)
-    if (volumeValue < 0){
-      volumeValue = 0
-      console.log("Volume value "+volumeValue+" lower than 0 => corrected to 0")
-    }
-    else if (volumeValue > 100){
-      volumeValue = 100
-      console.log("Volume value "+volumeValue+" bigger than 100 => corrected to 100")
-    }
+    volumeValue = Math.round(volumeValue);
+    volumeValue = Math.max(volumeValue,0);
+    volumeValue = Math.min(volumeValue,100);
 
     console.log("Setting system volume to value "+volumeValue)
 
@@ -20,7 +15,7 @@ module.exports = {
       function(error){
       console.log(error)
       },
-      "systemVolume",
+      "SystemVolume",
       "set",
       [volumeValue]);
   }
